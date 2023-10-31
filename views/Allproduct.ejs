@@ -1,0 +1,55 @@
+<div class="container my-5 pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <a href="Creaepage" class="btn btn-primary my-3">Add Product</a>
+      <div class="card">
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Reguler Price</th>
+                <th>Sale Price</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% product.forEach((item, index) => { %>
+              <tr class="align-middle">
+                <td><%= index + 1%></td>
+                <td>
+                  <img
+                    style="width: 80px; height: 75px; object-fit: contain"
+                    src="/product/<%= item.photo %>"
+                    alt=""
+                  />
+                </td>
+                <td><%= item.name %></td>
+                <td><%= item.regulerPrice %>tk</td>
+                <td><%= item.salePrice %>tk</td>
+                <td><%= item.category %></td>
+                <td><%= item.stock %>kg</td>
+                <td>
+                  <a href="/Edit/<%= item.id %>" class="btn btn-success"
+                    ><i class="fa-solid fa-pen-fancy"></i
+                  ></a>
+                  <a href="Singlepage/<%= item.slug %>" class="btn btn-info"
+                    ><i class="fa-solid fa-eye"></i
+                  ></a>
+                  <a href="delete/<%= item.id %>" class="btn btn-danger"
+                    ><i class="fa-solid fa-person-circle-minus"></i
+                  ></a>
+                </td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

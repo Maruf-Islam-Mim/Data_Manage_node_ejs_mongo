@@ -1,0 +1,38 @@
+<div class="container my-5 pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="singleContent">
+                <img
+                  style="width: 200px; height: 400px"
+                  src="/product/<%= product.photo %>"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="product_content">
+                <h4>View <%= product.slug %> Product</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  deserunt ea, est reiciendis tempora eveniet fugit odit
+                  perspiciatis eligendi suscipit.
+                </p>
+                <div class="p-c d-flex my-2">
+                  <p>Price: <% product.slug.salePrice %></p>
+                  <p>Category: <% product.category %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="back my-3">
+            <a href="/" class="btn btn-primary">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
